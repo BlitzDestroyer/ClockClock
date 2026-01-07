@@ -1,0 +1,63 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Core.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Core.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Clock Clock">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Left"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Grid x:Name="HourDigitTens"
+                  ColumnDefinitions="50,50,50,50"
+                  RowDefinitions="50,50,50,50,50,50"
+                  RowSpacing="0"
+                  ColumnSpacing="0">
+            </Grid>
+            <Grid x:Name="HourDigitOnes"
+                  ColumnDefinitions="50,50,50,50"
+                  RowDefinitions="50,50,50,50,50,50"
+                  RowSpacing="0"
+                  ColumnSpacing="0"
+                  Margin="0,0,20,0">
+            </Grid>
+            <Grid x:Name="MinuteDigitTens"
+                  ColumnDefinitions="50,50,50,50"
+                  RowDefinitions="50,50,50,50,50,50"
+                  RowSpacing="0"
+                  ColumnSpacing="0">
+            </Grid>
+            <Grid x:Name="MinuteDigitOnes"
+                  ColumnDefinitions="50,50,50,50"
+                  RowDefinitions="50,50,50,50,50,50"
+                  RowSpacing="0"
+                  ColumnSpacing="0"
+                  Margin="0,0,20,0">
+            </Grid>
+            <Grid x:Name="SecondDigitTens"
+                  ColumnDefinitions="50,50,50,50"
+                  RowDefinitions="50,50,50,50,50,50"
+                  RowSpacing="0"
+                  ColumnSpacing="0">
+            </Grid>
+            <Grid x:Name="SecondDigitOnes"
+                  ColumnDefinitions="50,50,50,50"
+                  RowDefinitions="50,50,50,50,50,50"
+                  RowSpacing="0"
+                  ColumnSpacing="0">
+            </Grid>
+        </StackPanel>
+    </DockPanel>
+</Window>
